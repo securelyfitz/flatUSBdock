@@ -11,7 +11,7 @@ union(){
         rotate([0,-90,0])cylinder(r,r,r);
         rotate([90,0,0])cylinder(r,r,r);
     }
-    translate([0,w-h,r])intersection(){
+    translate([0,w-h-.001,r])intersection(){
         rotate([0,-90,0])cylinder(r,r,r);
         rotate([-90,0,0])cylinder(r,r,r);
     }
@@ -39,8 +39,8 @@ usbhoffset=4;
 
 
 difference(){
-    translate([-h/2-overlap,-overlap-(h/2),0])cube([50,w+overlap+overlap,h+overlap/2]);
+    translate([-h/2-overlap-5,-overlap-(h/2),0])cube([50,w+overlap+overlap,h+overlap/2]);
     phone(l,w,h);
-    translate([-usbw,w/2-usbw/2-h/2,usbhoffset-usbh/2])cube([17,usbw,usbh]);
+    translate([-usbw-3,w/2-usbw/2-h/2,usbhoffset-usbh/2])cube([17,usbw,usbh]);
 
 }
